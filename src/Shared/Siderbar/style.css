@@ -1,0 +1,18 @@
+.siderbar {
+    height: 420px;
+    width: 15%;
+    background-color: #FFE0B2;   
+   
+}
+
+.siderbar ul {
+    list-style: none;
+}
+
+.siderbar ul li {
+    padding: 20px;
+}
+
+.siderbar ul li a{
+    text-decoration: none;
+}
