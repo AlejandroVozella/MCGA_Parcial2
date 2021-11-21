@@ -1,17 +1,28 @@
-import {BrowserRouter as Router , Route} from 'react-router-dom'
+import {BrowserRouter as Router , Route , Switch} from 'react-router-dom'
 import './App.css';
 import Footer from './Shared/Footer/Footer';
-import Navbar from './Shared/Navbar/Navbar';
-import Siderbar from './Shared/Siderbar/Siderbar';
-
-
-
+import Header from './Shared/Header/Header';
+import Sidebar from './Shared/Sidebar/Sidebar';
+import Inicio from './componentes/Inicio/Inicio';
+import Cabanas from './componentes/Cabanas/Cabanas';
+import Clientes from './componentes/Clientes/Clientes';
+import Recepcionistas from './componentes/Recepcionistas/Recepcionista';
+import Reservas from './componentes/Reservas/Reservas';
 
 function App() {
   return (
     <Router>
-       <Navbar />
-       <Siderbar />
+       <Header />
+       <div className="contenedor">
+          <Sidebar />
+           <Switch>          
+              <Route exact path='/' component={Inicio} />
+              <Route exact path='/cabanas' component={Cabanas} />
+              <Route exact path='/clientes' component={Clientes} />
+              <Route exact path='/recepcionistas' component={Recepcionistas} />
+              <Route exact path='/reservas' component={Reservas} />
+          </Switch>
+        </div>
        <Footer />
     </Router>
   );
