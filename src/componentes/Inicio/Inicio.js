@@ -1,3 +1,5 @@
+import './style.css';
+
 const Inicio = ()=>{
     return(
         <div>
