@@ -3,7 +3,7 @@ import React from "react";
 function Cabanas () {
     return (
         <div>
-            <h3>Cabañas</h3>
+            <h3>Listado de Cabañas</h3>
         </div>
     );
 }

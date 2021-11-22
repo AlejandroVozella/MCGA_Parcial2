@@ -9,6 +9,11 @@ import Clientes from './componentes/Clientes/Clientes';
 import Recepcionistas from './componentes/Recepcionistas/Recepcionista';
 import Reservas from './componentes/Reservas/Reservas';
 
+//Componentes de Cabañas 
+import NewCabana from './componentes/Cabanas/NewCabana';
+import EditCabana from './componentes/Cabanas/EditCabana';
+
+
 function App() {
   return (
     <Router>
@@ -16,8 +21,10 @@ function App() {
        <div className="contenedor">
           <Sidebar />
            <Switch>          
-              <Route exact path='/' component={Inicio} />
+              <Route exact path='/' component={Inicio} />              
               <Route exact path='/cabanas' component={Cabanas} />
+              <Route exact path='/cabanas/new' component={NewCabana} />
+              <Route exact path='/cabanas/edit/:id' component={EditCabana} />              
               <Route exact path='/clientes' component={Clientes} />
               <Route exact path='/recepcionistas' component={Recepcionistas} />
               <Route exact path='/reservas' component={Reservas} />
